@@ -203,6 +203,11 @@ p{
     display: flex;
     flex-direction: row;
 }
+@media screen and (max-width: 576px){
+  .display_flex{
+    flex-direction: column;
+  }
+}
 
 .btn{
     background-color: #E02C6D;
@@ -215,6 +220,7 @@ p{
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
 }
 
 .image{
@@ -223,7 +229,7 @@ p{
 .gap{
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 80px;
 }
 
 
@@ -273,6 +279,13 @@ p{
 .hero{
     justify-content: space-between;
     align-items: center;
+  
+    
+}
+.hero .hero_right_image{
+    background-image:url('./images/Circle\ design.svg') ;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero .hero_left_info{
@@ -283,6 +296,63 @@ p{
 }
 
 
+/*============== Media Query For Hero ================== */
+@media screen and (max-width: 576px){
+  .hero{
+    flex-direction: column-reverse;
+  
+  }
+  .hero .hero_left_info{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Brand Section  */
+.brands{
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  justify-content: center;
+  gap: 50px;
+  border-top: 1px solid #C0CCDA;
+  border-bottom: 1px solid #C0CCDA;
+  padding: 20px 0px;
+  align-items: center;
+  border-radius: 8px;
+  margin: 60px 0px
+  
+}
+/*============== Media Query For brands ================== */
+
+@media screen and (max-width: 576px){
+  .brands{
+  grid-template-columns: repeat(4, max-content);
+  gap: 10px;
+  margin: 40px 0px;
+  
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 996px){
+.brands{
+  grid-template-columns: repeat(5, max-content);
+  gap: 20px;
+  
+  }
+}
 
 
 
